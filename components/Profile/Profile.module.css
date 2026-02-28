@@ -1,4 +1,19 @@
 .container{
     width: 100%;
     min-height: 100vh;
+    margin-top: 60px;
+    color: #fff;
+}
+
+.container .content{
+    padding: 2rem;
+}
+
+.container .content .TextContent{
+    white-space: pre-line;
+    line-height: 4;
+    font-family: var(--font2);
+    font-size: 13px;
+    font-weight: 100;
+    /* color: rgb(0, 181, 0); */
 }
