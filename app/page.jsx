@@ -4,6 +4,7 @@ import RelaxIconPNG from '@/public/poomrelaxIconPNG.png'
 import TypeWring from "@/components/TypeWring";
 import { HiChevronDoubleDown } from "react-icons/hi2";
 import Profile from "@/components/Profile/Profile";
+import Performance from "@/components/Performance/Performance";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
     </div>
     </div>
     <Profile />
+    <Performance />
     </>
   );
 }
