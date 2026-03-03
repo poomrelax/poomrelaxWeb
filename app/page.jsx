@@ -14,8 +14,8 @@ export default function Home() {
       <div className={styles.container}>
       <div className={styles.i_backdrop}></div>
       <div className={styles.content}>
-        <div style={{color: '#fff', display: 'flex', gap: '8px', fontFamily: 'var(--font1)', fontSize: 11}}><h1>welcome to</h1><h1 >website</h1></div>
-        <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+        <div style={{color: '#fff', display: 'flex', gap: '8px', fontFamily: 'var(--font1)', fontSize: 11}} className={styles.texth}><h1>welcome to</h1><h1 >website</h1></div>
+        <div style={{display: 'flex', alignItems: 'center', gap: '8px'}} className={styles.host}>
           <h2>{"<"}</h2>
           <h2 className={styles.textheader} >poomrelax</h2>
           <h2>{"/>"}</h2>
@@ -23,7 +23,7 @@ export default function Home() {
         {/* <h3 style={{fontSize: '16px', fontFamily: 'var(--font1)',  marginTop: '5px'}}>This website, belonging to Mr. Puriphat Hemtananont</h3> */}
        <TypeWring/>
       </div> 
-      <Image src={RelaxIconPNG} alt="poomrelaxIcon" width={300} height={300} style={{marginRight: '10%'}}/>
+      <Image src={RelaxIconPNG} alt="poomrelaxIcon" width={300} height={300} className={styles.logo} style={{marginRight: '10%'}}/>
     </div>
     <div className={styles.scrollA}>
       <HiChevronDoubleDown color="#ffffff" size={25}/>

@@ -5,7 +5,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 function TypeWring() {
 
-    const word = ["Hello World.", "Poom Relax.", "Puripat Hemthanon.", "Website Relax.", "There is nothing we cannot do if we never give up."]
+    const word = ["Hello World.", "Poom Relax.", "Puripat Hemthanon.", "Website Relax.",]
 
   return (
     <>

@@ -26,3 +26,16 @@
     font-weight: 100;
     color: var(--color1);
 }
+
+@media screen and (max-width: 640px) {
+
+   .container .content{
+    flex-direction: column-reverse;
+    gap: 30px;
+    margin-left: 60px;
+   }
+   .container .content .TextContent{
+    width: 150%;
+    /* border: 1px solid red; */
+   }
+}

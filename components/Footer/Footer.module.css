@@ -27,3 +27,29 @@
     align-items: center;
     gap: 10px;
 }
+
+
+@media screen and (max-width: 640px) {
+    .container{
+        /* border: 1px solid red; */
+        width: 116%;
+    }
+   .container .contact p{
+        font-size: 12px;
+   }
+   .container .contact{
+    /* border: 1px solid red; */
+        width: 93%;
+   }
+
+   .container .bottom{
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+   }
+
+    .container .bottom .copy{
+        width: 100%;
+        font-size: 13px;
+    }
+}

@@ -74,3 +74,29 @@
     opacity: 0;
   }
 }
+
+/* Response Mobile */
+
+@media screen and (max-width: 640px) {
+
+   .container .logo{
+    /* width: 50%; */
+    display: none;
+   }
+
+   .container .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
+    /* align-items: center; */
+    width: 100%;
+   }
+    .container .content .host{
+     font-size: 17px;
+    }
+
+    .container .content .textheader{
+      font-size: 26px;
+    }
+}

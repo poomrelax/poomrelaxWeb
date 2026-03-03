@@ -75,3 +75,14 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+@media screen and (max-width: 640px) {
+   .container .content{
+    margin-left: 30px;
+    /* border: 1px solid red; */
+    width: 100%;
+   }
+    .container .content .items .box .detail{
+        overflow: auto;
+    }
+}
