@@ -4,6 +4,7 @@
   --font1: "Playpen Sans Thai", cursive;
   --font2: "Press Start 2P", system-ui;
   --color1: #8a1efd;
+  --color2: hsl(0, 86%, 86%);
 }
 
 *{
@@ -12,8 +13,16 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+  /* user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; */
+}
+
 body{
   background: #000;
+  /* -webkit-tap-highlight-color: transparent; */
 }
 
 .backdrop{
@@ -23,6 +32,7 @@ body{
   position: fixed;
   animation: fade-out 3s ease forwards;
   z-index: 999;
+  pointer-events: none;
 }
 
 /* animation ALL */

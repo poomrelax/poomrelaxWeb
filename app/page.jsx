@@ -5,6 +5,7 @@ import TypeWring from "@/components/TypeWring";
 import { HiChevronDoubleDown } from "react-icons/hi2";
 import Profile from "@/components/Profile/Profile";
 import Performance from "@/components/Performance/Performance";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
     </div>
     <Profile />
     <Performance />
+    <Footer/>
     </>
   );
 }

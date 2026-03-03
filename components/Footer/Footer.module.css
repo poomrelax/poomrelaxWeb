@@ -1,0 +1,29 @@
+.container{
+    font-family: var(--font1);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    margin-bottom: 80px;
+    margin-top: 130px;
+}
+
+.container .contact{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.container .contact p{
+    color: #fff;
+}
+
+.container .copy{
+    color: #fff;
+    margin-top: 10px;
+    display: flex;
+    width: 75%;
+    align-items: center;
+    gap: 10px;
+}
