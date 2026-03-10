@@ -6,6 +6,7 @@ import { FaBookOpen } from "react-icons/fa";
 import { ImProfile } from "react-icons/im";
 import { IoMdPhonePortrait } from "react-icons/io";
 import { SiShopee } from "react-icons/si";
+import { VscNotebook } from "react-icons/vsc";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,6 +19,7 @@ function Performance() {
     {icon: <IoMdPhonePortrait size={25} color='#00daf2'/>, title: 'homework relax App', detail: 'แอปจดการบ้านเป็นเครื่องมือที่ช่วยให้นักเรียนบันทึก ติดตาม และจัดการงานที่ได้รับมอบหมายได้อย่างสะดวกผ่านสมาร์ตโฟนหรือแท็บเล็ต ผู้ใช้งานสามารถเพิ่มรายละเอียดงาน กำหนดวันครบกำหนด และตั้งแจ้งเตือนล่วงหน้าเพื่อป้องกันการลืมส่งงาน แอปส่วนใหญ่มีฟีเจอร์จัดหมวดหมู่ตามรายวิชา แสดงงานในรูปแบบปฏิทิน และตรวจสอบสถานะงานว่าเสร็จแล้วหรือยังไม่เสร็จ ช่วยให้บริหารเวลาได้ดีขึ้นและจัดระเบียบการเรียนได้อย่างมีประสิทธิภาพ', logo: 'https://image2url.com/r2/default/images/1772440459829-a2939ecd-dc25-4512-917d-37ee3ac4be87.png', status: 'developing', link: 'no link'},
     {icon: <ImProfile size={25} color='#00daf2'/>, title: 'e-folio', detail: 'เว็บไซต์นี้เป็นเว็บไซต์แนะนำตัวและแฟ้มสะสมผลงาน (e-Portfolio) ของ นายภูริพัฒน์ เหมทานนท์ จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว ประวัติการศึกษา ทักษะ ความสามารถ และผลงานต่าง ๆ ไว้ในรูปแบบออนไลน์', logo: 'https://image2url.com/r2/default/images/1772511676633-90db477a-ae53-4c5e-9c82-6ce0d9cd4dd3.png', status: 'online', link: 'https://efolio.poomrelax.in.th/'},
     {icon: <SiShopee size={25} color='#00daf2'/>, title: 'bangbaimai shope', detail: 'เว็ปไซต์สั่งอาหารในตลาดบางใบไม้ เป็นรายวิชาของการศึกษาค้นคว้าด้วยตัวเอง IS ทำเพื่อให้นักท่องเที่ยวได้ทราบว่าร้านหรือบริการไหนเปิดให้บริการบ้าง และสามารถจ้องหรือสั่งอาหารได้ผ่านเว็ปไซต์', logo: 'https://image2url.com/r2/default/images/1772512514690-a5d2a81c-5ee4-4380-b63f-1aac999ef523.png', status: 'offline', link: 'https://bangbaimai.poomrelax.in.th/'},
+    {icon: <VscNotebook size={25} color='#00daf2'/>, title: 'RecordStudy', detail: 'เว็บไซต์นี้ถูกพัฒนาขึ้นเพื่อใช้สำหรับ บันทึกหลังการจัดการเรียนรู้ของครูผู้สอน โดยช่วยให้ครูสามารถกรอกข้อมูลรายละเอียดการสอน เช่น รายวิชา ภาคเรียน วันที่สอน เวลา และผลการจัดการเรียนรู้ได้อย่างเป็นระบบผ่านหน้าเว็บไซต์ เมื่อผู้ใช้งานกรอกข้อมูลครบถ้วนแล้ว ระบบจะทำการ สร้างเอกสารในรูปแบบ PDF อัตโนมัติ ซึ่งมีรูปแบบคล้ายเอกสารราชการหรือแบบฟอร์มรายงาน ทำให้สามารถนำไฟล์ไป ดาวน์โหลดหรือสั่งพิมพ์ (Print) ออกมาเป็นกระดาษได้ทันที', logo: 'https://image2url.com/r2/default/images/1773129102576-f3918bd3-fb8a-428c-a17e-85740d8a670d.png', status: 'online', link: 'https://recordstudy.poomrelax.in.th/'},
   ]
 
   const colorStatus = (e) => {

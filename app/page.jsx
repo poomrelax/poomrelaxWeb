@@ -23,6 +23,7 @@ export default function Home() {
         {/* <h3 style={{fontSize: '16px', fontFamily: 'var(--font1)',  marginTop: '5px'}}>This website, belonging to Mr. Puriphat Hemtananont</h3> */}
        <TypeWring/>
       </div> 
+      <p style={{position: 'absolute', left: '-9999px'}}>เว็ปไซต์หลักของ นายภูริพัฒน์ เหมทานนท์ ใช้สำหรับแสดงข้อมูลต่างๆ มีผลงานเว็ปไซต์ให้ได้ใช้งาน</p>
       <Image src={RelaxIconPNG} alt="poomrelaxIcon" width={300} height={300} className={styles.logo} style={{marginRight: '10%'}}/>
     </div>
     <div className={styles.scrollA}>
