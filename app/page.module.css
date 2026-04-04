@@ -45,7 +45,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 53px;
+  /* margin-left: 0px; */
   /* background: linear-gradient(180deg, #fff, #373737); */
   animation: scrollAnimation 2s ease-in-out infinite;
 }
@@ -87,10 +87,11 @@
    .container .content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center;
     /* border: 1px solid red; */
-    /* align-items: center; */
+    /* align-items: flex-start; */
     width: 100%;
+    /* border: 1px solid red; */
    }
     .container .content .host{
      font-size: 17px;
@@ -98,5 +99,12 @@
 
     .container .content .textheader{
       font-size: 26px;
+    }
+
+    .header .scrollA{
+      position: absolute;
+      top: 90%;
+      left: 48%;
+      /* margin-bottom: 50px; */
     }
 }

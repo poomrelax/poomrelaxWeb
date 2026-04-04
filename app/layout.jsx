@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
+
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -10,6 +12,13 @@ import "./globals.css";
 //   variable: "--font-geist-mono",
 //   subsets: ["latin"],
 // });
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata = {
   title: "Poom Relax",
@@ -26,6 +35,14 @@ export default function RootLayout({ children }) {
       <body>
         <div className="backdrop"></div>
         {children}
+        <Script id="disable-context-menu" strategy="afterInteractive">{`
+          document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+          });
+          document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+          });
+        `}</Script>
       </body>
     </html>
   );

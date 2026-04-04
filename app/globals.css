@@ -23,7 +23,14 @@ html{
 
 body{
   background: #000;
+  overflow-x: hidden;
   /* -webkit-tap-highlight-color: transparent; */
+}
+
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
 .backdrop{

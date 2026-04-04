@@ -78,10 +78,34 @@
 
 @media screen and (max-width: 640px) {
    .container .content{
-    margin-left: 30px;
-    /* border: 1px solid red; */
+    margin-left: 0;
     width: 100%;
+    padding: 0 1rem;
+    /* display: flex; */
+    /* border: 1px solid red; */
+
+    & h1{
+        font-size: 30px;
+    }
    }
+
+   .container .content .items{
+       /* border: 1px solid red; */
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .container .content .items .box .header {
+        /* border: 1px solid red; */
+        margin-top: 3px;
+        & h2{
+            font-size: 20px;
+        }
+   }
+    .container .content .items .box{
+        width: 80%;
+    }
     .container .content .items .box .detail{
         overflow: auto;
     }
