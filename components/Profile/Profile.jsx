@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import styleProfile from './Profile.module.css'
 import { Typewriter } from 'react-simple-typewriter'
 import Image from 'next/image'
-import MyImage from '@/public/me.webp'
+import MyImage from '@/public/me2.webp'
 
 function Profile() {
 
