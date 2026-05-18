@@ -32,6 +32,14 @@ function Performance() {
     }
   }
 
+  const changContextLink = (e) => {
+    if(e.length > 36){
+      return e.slice(0, 36) + '...'
+    }else{
+      return e
+    }
+  }
+
   useEffect(() => {
         const observer = new IntersectionObserver(
       (all) => {
@@ -77,7 +85,7 @@ function Performance() {
                   {item.link == 'no link' ? (
                     <div style={{display: 'flex', gap: '10px', width: '100%', marginTop: '3px'}}><p>link: </p><p style={{textTransform: 'lowercase', textDecoration: 'underline', color: 'var(--color2)'}}>{item.link}</p></div>
                   ) : (
-                    <div style={{display: 'flex', gap: '10px', width: '100%', marginTop: '3px'}}><p>link: </p><Link href={item.link} target='_blank'><p style={{textTransform: 'lowercase', textDecoration: 'underline', color: 'var(--color2)'}}>{item.link}</p></Link></div>
+                    <div style={{display: 'flex', gap: '10px', width: '100%', marginTop: '3px'}}><p>link: </p><Link href={item.link} target='_blank'><p style={{textTransform: 'lowercase', textDecoration: 'underline', color: 'var(--color2)'}}>{changContextLink(item.link)}</p></Link></div>
                   )}
                 </div>
               </div>
