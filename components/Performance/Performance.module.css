@@ -102,6 +102,11 @@
 }
 
 @media screen and (max-width: 640px) {
+
+    .container{
+        margin-top: 7rem;
+    }
+
    .container .content{
     margin-left: 0;
     width: 100%;

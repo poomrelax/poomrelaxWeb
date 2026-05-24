@@ -49,13 +49,10 @@ function Performance() {
       if(item.status == 'online' || item.status == 'offline') return item
 
       try {
-        const response = await fetch(item.link, { method: 'HEAD' });
-        console.log(item.title, response.status);
-        if (response.ok) {
-          return { ...item, status: 'online' };
-        } else {
-          return { ...item, status: 'offline' };
-        }
+        const res = await fetch(`/api/check-online?url=${encodeURIComponent(item.link)}`, { method: 'GET' });
+        const { online } = await res.json();
+        // console.log(item.title, online);
+        return { ...item, status: online ? 'online' : 'offline' };
       } catch (error) {
         return { ...item, status: 'offline' };
       }
