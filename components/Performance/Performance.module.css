@@ -1,3 +1,28 @@
+.loadder{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 3s ease-out;
+}
+
+.loadder.active{
+    position: fixed;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
 .container{
     color: #fff;
     width: 100%;

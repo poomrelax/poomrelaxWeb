@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import stylesPerformance from './Performance.module.css'
 import { FaBookOpen } from "react-icons/fa";
 import { ImProfile } from "react-icons/im";
@@ -9,18 +9,19 @@ import { SiShopee } from "react-icons/si";
 import { VscNotebook } from "react-icons/vsc";
 import Image from 'next/image';
 import Link from 'next/link';
+import { DNA } from 'react-loader-spinner';
 
 function Performance() {
 
   const refs = useRef([])
-
-  const items = [
-    {icon: <FaBookOpen size={25} color='#00daf2'/>, title: 'homework relax', detail: 'เว็บไซต์จดการบ้านออนไลน์เป็นระบบที่ช่วยให้นักเรียนสามารถบันทึก ติดตาม และจัดการงานที่ได้รับมอบหมายได้อย่างเป็นระบบ ผู้ใช้งานสามารถเพิ่มรายละเอียดงาน กำหนดวันส่ง และตรวจสอบสถานะงานได้ทุกที่ทุกเวลาผ่านอินเทอร์เน็ต', logo: 'https://image2url.com/r2/default/images/1772440459829-a2939ecd-dc25-4512-917d-37ee3ac4be87.png', status: 'offline', link: 'https://homework.poomrelax.in.th/'},
+  const [items, setItems] = useState( [
+    {icon: <FaBookOpen size={25} color='#00daf2'/>, title: 'homework relax', detail: 'เว็บไซต์จดการบ้านออนไลน์เป็นระบบที่ช่วยให้นักเรียนสามารถบันทึก ติดตาม และจัดการงานที่ได้รับมอบหมายได้อย่างเป็นระบบ ผู้ใช้งานสามารถเพิ่มรายละเอียดงาน กำหนดวันส่ง และตรวจสอบสถานะงานได้ทุกที่ทุกเวลาผ่านอินเทอร์เน็ต', logo: 'https://image2url.com/r2/default/images/1772440459829-a2939ecd-dc25-4512-917d-37ee3ac4be87.png', status: '', link: 'https://homework.poomrelax.in.th/'},
     {icon: <IoMdPhonePortrait size={25} color='#00daf2'/>, title: 'homework relax App', detail: 'แอปจดการบ้านเป็นเครื่องมือที่ช่วยให้นักเรียนบันทึก ติดตาม และจัดการงานที่ได้รับมอบหมายได้อย่างสะดวกผ่านสมาร์ตโฟนหรือแท็บเล็ต ผู้ใช้งานสามารถเพิ่มรายละเอียดงาน กำหนดวันครบกำหนด และตั้งแจ้งเตือนล่วงหน้าเพื่อป้องกันการลืมส่งงาน แอปส่วนใหญ่มีฟีเจอร์จัดหมวดหมู่ตามรายวิชา แสดงงานในรูปแบบปฏิทิน และตรวจสอบสถานะงานว่าเสร็จแล้วหรือยังไม่เสร็จ ช่วยให้บริหารเวลาได้ดีขึ้นและจัดระเบียบการเรียนได้อย่างมีประสิทธิภาพ', logo: 'https://image2url.com/r2/default/images/1772440459829-a2939ecd-dc25-4512-917d-37ee3ac4be87.png', status: 'online', link: 'https://drive.google.com/drive/folders/16UKWDP8j4NOkOVKqpRIdOX1S7R37cHv6?usp=sharing'},
     {icon: <ImProfile size={25} color='#00daf2'/>, title: 'e-folio', detail: 'เว็บไซต์นี้เป็นเว็บไซต์แนะนำตัวและแฟ้มสะสมผลงาน (e-Portfolio) ของ นายภูริพัฒน์ เหมทานนท์ จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว ประวัติการศึกษา ทักษะ ความสามารถ และผลงานต่าง ๆ ไว้ในรูปแบบออนไลน์', logo: 'https://image2url.com/r2/default/images/1772511676633-90db477a-ae53-4c5e-9c82-6ce0d9cd4dd3.png', status: 'online', link: 'https://efolio.poomrelax.in.th/'},
-    {icon: <SiShopee size={25} color='#00daf2'/>, title: 'bangbaimai shope', detail: 'เว็ปไซต์สั่งอาหารในตลาดบางใบไม้ เป็นรายวิชาของการศึกษาค้นคว้าด้วยตัวเอง IS ทำเพื่อให้นักท่องเที่ยวได้ทราบว่าร้านหรือบริการไหนเปิดให้บริการบ้าง และสามารถจ้องหรือสั่งอาหารได้ผ่านเว็ปไซต์', logo: 'https://image2url.com/r2/default/images/1772512514690-a5d2a81c-5ee4-4380-b63f-1aac999ef523.png', status: 'offline', link: 'https://bangbaimai.poomrelax.in.th/'},
-    {icon: <VscNotebook size={25} color='#00daf2'/>, title: 'RecordStudy', detail: 'เว็บไซต์นี้ถูกพัฒนาขึ้นเพื่อใช้สำหรับ บันทึกหลังการจัดการเรียนรู้ของครูผู้สอน โดยช่วยให้ครูสามารถกรอกข้อมูลรายละเอียดการสอน เช่น รายวิชา ภาคเรียน วันที่สอน เวลา และผลการจัดการเรียนรู้ได้อย่างเป็นระบบผ่านหน้าเว็บไซต์ เมื่อผู้ใช้งานกรอกข้อมูลครบถ้วนแล้ว ระบบจะทำการ สร้างเอกสารในรูปแบบ PDF อัตโนมัติ ซึ่งมีรูปแบบคล้ายเอกสารราชการหรือแบบฟอร์มรายงาน ทำให้สามารถนำไฟล์ไป ดาวน์โหลดหรือสั่งพิมพ์ (Print) ออกมาเป็นกระดาษได้ทันที', logo: 'https://image2url.com/r2/default/images/1773129102576-f3918bd3-fb8a-428c-a17e-85740d8a670d.png', status: 'online', link: 'https://recordstudy.poomrelax.in.th/'},
-  ]
+    {icon: <SiShopee size={25} color='#00daf2'/>, title: 'bangbaimai shope', detail: 'เว็ปไซต์สั่งอาหารในตลาดบางใบไม้ เป็นรายวิชาของการศึกษาค้นคว้าด้วยตัวเอง IS ทำเพื่อให้นักท่องเที่ยวได้ทราบว่าร้านหรือบริการไหนเปิดให้บริการบ้าง และสามารถจ้องหรือสั่งอาหารได้ผ่านเว็ปไซต์', logo: 'https://image2url.com/r2/default/images/1772512514690-a5d2a81c-5ee4-4380-b63f-1aac999ef523.png', status: '', link: 'https://bangbaimai.poomrelax.in.th/'},
+    {icon: <VscNotebook size={25} color='#00daf2'/>, title: 'RecordStudy', detail: 'เว็บไซต์นี้ถูกพัฒนาขึ้นเพื่อใช้สำหรับ บันทึกหลังการจัดการเรียนรู้ของครูผู้สอน โดยช่วยให้ครูสามารถกรอกข้อมูลรายละเอียดการสอน เช่น รายวิชา ภาคเรียน วันที่สอน เวลา และผลการจัดการเรียนรู้ได้อย่างเป็นระบบผ่านหน้าเว็บไซต์ เมื่อผู้ใช้งานกรอกข้อมูลครบถ้วนแล้ว ระบบจะทำการ สร้างเอกสารในรูปแบบ PDF อัตโนมัติ ซึ่งมีรูปแบบคล้ายเอกสารราชการหรือแบบฟอร์มรายงาน ทำให้สามารถนำไฟล์ไป ดาวน์โหลดหรือสั่งพิมพ์ (Print) ออกมาเป็นกระดาษได้ทันที', logo: 'https://image2url.com/r2/default/images/1773129102576-f3918bd3-fb8a-428c-a17e-85740d8a670d.png', status: '', link: 'https://recordstudy.poomrelax.in.th/'},
+  ])
+  const [loadding, setLoadding] = useState(true)
 
   const colorStatus = (e) => {
     if(e == 'online'){
@@ -29,6 +30,8 @@ function Performance() {
       return <p style={{color: 'hsl(54, 100%, 60%)', fontWeight: '600'}}>{e} 🕑</p>
     }else if(e == 'offline'){
       return <p style={{color: 'hsl(0, 0%, 85%)', fontWeight: '600'}}>{e} 🔘</p>
+    }else if(e == ''){
+      return <p style={{color: 'hsl(54, 100%, 60%)', fontWeight: '600'}}>checking... 🕔</p>
     }
   }
 
@@ -39,6 +42,33 @@ function Performance() {
       return e
     }
   }
+
+  const checkOnline = async () => {
+    const newItems = await Promise.all(items.map(async (item) => {
+
+      if(item.status == 'online' || item.status == 'offline') return item
+
+      try {
+        const response = await fetch(item.link, { method: 'HEAD' });
+        console.log(item.title, response.status);
+        if (response.ok) {
+          return { ...item, status: 'online' };
+        } else {
+          return { ...item, status: 'offline' };
+        }
+      } catch (error) {
+        return { ...item, status: 'offline' };
+      }
+    }));
+    setItems(newItems);
+    setTimeout(() => {
+      setLoadding(false)
+    }, 3000)
+  };
+
+  useEffect(() => {
+    checkOnline();
+  }, []);
 
   useEffect(() => {
         const observer = new IntersectionObserver(
@@ -60,8 +90,20 @@ function Performance() {
     }
   }, [])
 
+
   return (
     <>
+      <div className={`${stylesPerformance.loadder} ${loadding ? stylesPerformance.active : ''}`}>
+        <DNA
+        visible={true}
+        height="100"
+        width="100"
+        ariaLabel="loading"
+        wrapperStyle={{}}
+        wrapperClass="dna-wrapper"
+        dnaColorOne='#8a1efd'
+        />
+    </div>
     <div className={stylesPerformance.container}>
      <div className={stylesPerformance.content}>
     <div className={stylesPerformance.backdrop}></div>

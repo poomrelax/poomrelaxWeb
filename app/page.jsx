@@ -8,31 +8,32 @@ import Performance from "@/components/Performance/Performance";
 import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
+
   return (
     <>
-    <div className={styles.header}>
-      <div className={styles.container}>
-      <div className={styles.i_backdrop}></div>
-      <div className={styles.content}>
-        <div style={{color: '#fff', display: 'flex', gap: '8px', fontFamily: 'var(--font1)', fontSize: 11}} className={styles.texth}><h1>welcome to</h1><h1 >website</h1></div>
-        <div style={{display: 'flex', alignItems: 'center', gap: '8px'}} className={styles.host}>
-          <h2>{"<"}</h2>
-          <h2 className={styles.textheader} >poomrelax</h2>
-          <h2>{"/>"}</h2>
-        </div>
-        {/* <h3 style={{fontSize: '16px', fontFamily: 'var(--font1)',  marginTop: '5px'}}>This website, belonging to Mr. Puriphat Hemtananont</h3> */}
-       <TypeWring/>
-      </div> 
-      <p style={{position: 'absolute', left: '-9999px'}}>เว็ปไซต์หลักของ นายภูริพัฒน์ เหมทานนท์ ใช้สำหรับแสดงข้อมูลต่างๆ มีผลงานเว็ปไซต์ให้ได้ใช้งาน</p>
-      <Image src={RelaxIconPNG} alt="poomrelaxIcon" width={300} height={300} className={styles.logo} style={{marginRight: '10%'}}/>
-    </div>
-    <div className={styles.scrollA}>
-      <HiChevronDoubleDown color="#ffffff" size={25}/>
-    </div>
-    </div>
-    <Profile />
-    <Performance />
-    <Footer/>
+      <div className={styles.header}>
+        <div className={styles.container}>
+        <div className={styles.i_backdrop}></div>
+        <div className={styles.content}>
+          <div style={{color: '#fff', display: 'flex', gap: '8px', fontFamily: 'var(--font1)', fontSize: 11}} className={styles.texth}><h1>welcome to</h1><h1 >website</h1></div>
+          <div style={{display: 'flex', alignItems: 'center', gap: '8px'}} className={styles.host}>
+            <h2>{"<"}</h2>
+            <h2 className={styles.textheader} >poomrelax</h2>
+            <h2>{"/>"}</h2>
+          </div>
+          {/* <h3 style={{fontSize: '16px', fontFamily: 'var(--font1)',  marginTop: '5px'}}>This website, belonging to Mr. Puriphat Hemtananont</h3> */}
+        <TypeWring/>
+        </div> 
+        <p style={{position: 'absolute', left: '-9999px'}}>เว็ปไซต์หลักของ นายภูริพัฒน์ เหมทานนท์ ใช้สำหรับแสดงข้อมูลต่างๆ มีผลงานเว็ปไซต์ให้ได้ใช้งาน</p>
+        <Image src={RelaxIconPNG} alt="poomrelaxIcon" width={300} height={300} className={styles.logo} style={{marginRight: '10%'}}/>
+      </div>
+      <div className={styles.scrollA}>
+        <HiChevronDoubleDown color="#ffffff" size={25}/>
+      </div>
+      </div>
+      <Profile />
+      <Performance />
+      <Footer/>
     </>
   );
 }
